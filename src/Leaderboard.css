@@ -1,0 +1,135 @@
+.leaderboard-container {
+  padding: 1.5rem 1rem;
+  background: linear-gradient(to bottom, #f4f9f5 0%, #dcefe5 100%);
+  color: #2d4d3a;
+  text-align: left;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.leaderboard-container h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+  color: #264f3d;
+  padding-left: 0.5rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.loading-text, .no-data-text {
+  text-align: center;
+  color: #6b8f7a;
+  padding: 1rem;
+  font-style: italic;
+}
+
+.leaderboard-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.leaderboard-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.leaderboard-item {
+  background: #ffffff;
+  border-left: 5px solid #6ea786;
+  padding: 0.75rem 1rem;
+  margin: 0.5rem 0;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.leaderboard-item:hover {
+  background: #f0fef5;
+  transform: translateY(-2px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.rank-medal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 40px;
+}
+
+.rank {
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: center;
+  color: #407a58;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
+  flex: 1;
+}
+
+.name {
+  color: #2c5e45;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 2px;
+}
+
+.count {
+  color: #6b8f7a;
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+.score-badge {
+  background: #6ea786;
+  color: white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+/* Top 3 special styling */
+.leaderboard-item:nth-child(1) {
+  border-left-color: #FFD700;
+  background: linear-gradient(to right, #fffbf0 0%, #ffffff 30%);
+}
+
+.leaderboard-item:nth-child(2) {
+  border-left-color: #C0C0C0;
+  background: linear-gradient(to right, #f8f8f8 0%, #ffffff 30%);
+}
+
+.leaderboard-item:nth-child(3) {
+  border-left-color: #CD7F32;
+  background: linear-gradient(to right, #fcf3eb 0%, #ffffff 30%);
+}
+
+.leaderboard-item:nth-child(1) .rank {
+  font-size: 1.6rem;
+}
+
+.leaderboard-item:nth-child(2) .rank {
+  font-size: 1.5rem;
+}
+
+.leaderboard-item:nth-child(3) .rank {
+  font-size: 1.4rem;
+}

@@ -1,0 +1,127 @@
+.user-profile-wrapper {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #f4f9f5, #d7ede3); /* soft mint */
+  min-height: 100vh;
+  padding: 40px 16px 80px;
+}
+
+.user-card {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  margin: 0 auto 32px;
+  max-width: 400px;
+  position: relative;
+  overflow: hidden;
+  border-top: 5px solid #6ba388; /* green accent */
+}
+
+.user-avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  border: 3px solid #6ba388;
+  object-fit: cover;
+  background: white;
+  margin-bottom: 12px;
+  transition: transform 0.3s ease;
+}
+
+.user-avatar:hover {
+  transform: scale(1.05);
+}
+
+.user-card h2 {
+  font-size: 22px;
+  margin: 0;
+  color: #2d5b45; /* darker green text */
+}
+
+.user-info {
+  margin-top: 14px;
+  font-size: 0.95rem;
+  color: #4b6e5b;
+  text-align: center;
+}
+
+.user-info p {
+  margin: 5px 0;
+}
+
+.wish-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.wish-column {
+  flex: 1;
+  min-width: 280px;
+  max-width: 360px;
+  background: white;
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+  border-left: 4px solid #a2d4b5; /* light green left border */
+}
+
+.wish-column h3 {
+  text-align: center;
+  margin-bottom: 16px;
+  font-size: 17px;
+  color: #2f4f3e;
+}
+
+.wish-card {
+  background-color: #eef7f1;
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 14px;
+  width:90%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  font-size: 14px;
+  transition: box-shadow 0.2s;
+}
+
+.wish-card:hover {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.wish-card .wish-header {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #3e7158;
+}
+
+.clickable-username {
+  cursor: pointer;
+  color: #407d5f;
+  text-decoration: underline;
+}
+
+.center-text {
+  text-align: center;
+  font-size: 15px;
+  color: #688f7b;
+  margin-top: 20px;
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+}
+
+.social-links li a {
+  color: #519873;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.social-links li a:hover {
+  text-decoration: underline;
+}

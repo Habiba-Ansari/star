@@ -1,0 +1,67 @@
+.chat-corner-container {
+  padding: 1.5rem;
+  background: linear-gradient(to bottom, #f4f9f5 0%, #dcefe5 100%);
+  min-height: 100vh;
+}
+
+.chat-corner-title {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2d4d3a;
+}
+
+.chat-info-msg {
+  color: #666;
+  font-size: 1rem;
+}
+
+.chat-item {
+  background-color: #ffffff;
+  border-left: 5px solid #6ea786;
+  border-radius: 14px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+
+.chat-item:hover {
+  transform: scale(1.02);
+  background-color: #f0fef5;
+}
+
+.chat-emoji {
+  font-size: 1.5rem;
+  margin-right: 12px;
+}
+
+.chat-text {
+  flex: 1;
+  min-width: 0; /* This helps with flex item overflow issues */
+}
+
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  color: #2e5e4f;
+  font-size: 0.95rem;
+}
+
+.chat-preview {
+  margin-top: 4px;
+  color: #4e4e4e;
+  font-size: 0.9rem;
+  white-space: nowrap;        /* Prevent text from wrapping */
+  overflow: hidden;          /* Hide overflow content */
+  text-overflow: ellipsis;   /* Show ... when text overflows */
+  max-width: 100%;          /* Ensure it respects parent width */
+}
+.chat-time {
+  font-size: 0.75rem;
+  color: #777;
+}

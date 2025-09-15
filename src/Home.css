@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Space Grotesk', sans-serif;
+  background-color: #f4f9f5;
+  color: #2b2b2b;
+}
+
+/* Fixed dark navbar */
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 76px;
+  background-color: #264733;
+  border-bottom: 1px solid #1e3828;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px;
+  z-index: 1000;
+  font-family: 'Space Grotesk', sans-serif;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.top-bar-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.4px;
+}
+
+.top-bar-search-container {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+}
+
+.top-bar-search-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  font-size: 0.9rem;
+  color: #a8c3b4;
+}
+
+.top-bar-search {
+  width: 80%;
+  padding: 10px 14px 10px 36px;
+  border: 1px solid #a3c7b3;
+  border-radius: 8px;
+  background: #ffffff;
+  font-size: 0.95rem;
+  color: #1f1f1f;
+  transition: border-color 0.3s ease;
+}
+
+.top-bar-search:focus {
+  outline: none;
+  border-color: #78b997;
+}
+
+/* === Three-column layout === */
+.home-container {
+  padding: 100px 20px 80px; /* space for navbar */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* Leaderboard on the left */
+.leaderboard-container {
+  flex: 0 0 250px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  height: 300px; /* shorter */
+  overflow-y: auto;
+}
+
+/* Wishes in the center */
+.wish-feed-container {
+  flex: 1;
+  max-width: 600px; /* original wish size */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Chat on the right */
+.chat-corner-container {
+  flex: 0 0 600px; /* wider than before */
+  background: #fff;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  height: 350px; /* shorter */
+  overflow-y: auto;
+  width: 230px;
+}
+
+/* Scrollbars for side widgets */
+.leaderboard-container::-webkit-scrollbar {
+  width: 5px;
+}
+
+.chat-corner-container::-webkit-scrollbar {
+  width: 8px;
+}
+.leaderboard-container::-webkit-scrollbar-thumb,
+.chat-corner-container::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}
+
+/* Responsive stacking */
+@media (max-width: 900px) {
+  .home-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .leaderboard-container,
+  .wish-feed-container,
+  .chat-corner-container {
+    flex: none;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Wish Card Styling */
+.wish-card {
+  background: #ffffff;
+  border-left: 5px solid #c8e6d2;
+  border-radius: 12px;
+  padding: 18px 20px;
+  margin-bottom: 24px;
+  width: 100%;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wish-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  border-left-color: #aad5be;
+}
+
+.wish-header {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #3e7158;
+  margin-bottom: 6px;
+}
+
+.clickable-username {
+  color: #3e7158;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.clickable-username:hover {
+  color: #2f5a45;
+}
+
+.wish-text {
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #2b2b2b;
+  line-height: 1.5;
+}
+
+.wish-meta,
+.wish-category-location,
+.status-text {
+  font-size: 0.75rem;
+  color: #777;
+  margin: 3px 0;
+}
+
+/* Like/Dislike Buttons */
+.like-dislike-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.like-btn,
+.dislike-btn {
+  padding: 8px 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.25s ease;
+}
+
+.like-btn {
+  background-color: #d6eee1;
+  color: #2f694e;
+}
+
+.like-btn:hover {
+  background-color: #bfdccd;
+}
+
+.dislike-btn {
+  background-color: #fce0e0;
+  color: #993232;
+}
+
+.dislike-btn:hover {
+  background-color: #f5c6c6;
+}
+
+.like-btn.voted,
+.dislike-btn.voted {
+  opacity: 0.65;
+  pointer-events: none;
+}
+
+/* Fulfill / Complete Button */
+.wish-button {
+  margin-top: 16px;
+  background: #519873;
+  color: #ffffff;
+  border: none;
+  padding: 8px 18px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.wish-button:hover {
+  background: #407d5f;
+}
+
+/* Delete wish button styles */
+.delete-wish-btn {
+  background: #ff4757;
+  border: none;
+  color: white;
+  padding: 5px 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 12px;
+  margin-left: 10px;
+  transition: background 0.3s ease;
+}
+
+.delete-wish-btn:hover {
+  background: #ff2e43;
+}
+
+.wish-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
