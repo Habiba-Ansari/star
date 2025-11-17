@@ -1,4 +1,4 @@
-# 🌟 Star - Wish Fulfillment Platform
+# 🌟 Star - Wish Fulfillment Platform  https://wish-up-on-astar.netlify.app/
 
 Star is a social platform where users can share their wishes and help fulfill others' wishes. Create wishes, offer help, connect with others, and make dreams come true!
 
